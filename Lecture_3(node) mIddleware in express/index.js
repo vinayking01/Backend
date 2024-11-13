@@ -1,5 +1,4 @@
 //Topic  - Middleware
- //1. A middleware is a function that hooks into the routing process, performing an arbitrary operation at some point in the chain (depending on what we want it to do). 
 
 var express = require('express')
 var app = express();
@@ -28,7 +27,7 @@ app.use((req,res,next)=>{
 app.use((req,res,next)=>{
   // res.send("You are in middleware 2")
   console.log("In middleware 2")
-  next();  // the next function says move to next middleware otherwise the Routes. if you forgot to mention it along with any kind of response it will lead you to the error.
+  next();  
 
 })
 
@@ -36,10 +35,9 @@ app.get('/', function (req, res) {
   res.send('hello world')
 
 })
-  
 
 
-//(C) Third Example -  // Define middleware function
+//Applying middleware in single route ( either yours or prebuilt)
 
  const logTime = (req, res, next) => {
     console.log('Time:', Date.now());
@@ -50,7 +48,7 @@ app.get('/', function (req, res) {
   });
   
 
-  //(D) Fourth Example -  if wanted to route a details of samsung but not all this in index.js files so you can route it in this way which contain all routes related to samsung only . for this require router middleware use. routing to the other files but for the same category 
+  //(Applying middleware in group of route) -  if wanted to route a details of samsung but not all this in index.js files so you can route it in this way which contain all routes related to samsung only . for this require router middleware use. routing to the other files but for the same category 
 
   const Details = require('./Phones/loggedphones');
   

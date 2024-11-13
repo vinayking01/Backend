@@ -42,10 +42,28 @@ app.use((err, req, res, next) => {
 
 4. Built-in middleware: Provided by Express (e.g., express.static, express.json, etc.).
 
-## Concepts
+## Some Concepts
 
 ```javascript
-// 1. First example  - if you attached the multiple middleware , for passing to the next middleware you must use next() function. if you send the response to the server in any middleware and also don't use next() call then it will stop there and skip the remaining middleware .
+
+// 1- Applying middleware in single route . ( you can add your created middleware function  or either already present middleware etc.)
+
+ const logTime = (req, res, next) => {
+    console.log('Time:', Date.now());
+    next();
+  };
+  app.get('/Mytime', logTime, (req, res) => {
+    res.send('Hello, Person!');
+  });
+  
+// 2. - Applying middleware in group of route
+
+  const Details = require('./Phones/loggedphones');
+  
+  app.use('/phone-detail', Details);
+
+
+// 3. First example  - if you attached the multiple middleware , for passing to the next middleware you must use next() function. if you send the response to the server in any middleware and also don't use next() call then it will stop there and skip the remaining middleware .
 
 app.use((req,res,next)=>{
     // res.send("You are in middleware ")
@@ -57,7 +75,7 @@ app.use((req,res,next)=>{
 app.use((req,res,next)=>{
     // res.send("You are in middleware 2")
     console.log("In middleware 2")
-    next();  // the next function says move to next middleware otherwise the Routes. if you forgot to mention it along with any kind of response it will lead you to the error.
+    next(); 
 
 })
 
@@ -66,7 +84,7 @@ app.use((req,res,next)=>{
   })
 
 
-// 2. Second Example - if you have sent the request to the client first than you are attaching middleware after that, it won't work for the that type of route in between you want to attach the middleware.
+// 3. Second Example - if you have sent the request to the client first than you are attaching middleware after that, it won't work for the that type of route in between you want to attach the middleware.
 
 
  app.get('/', function (req, res,next) {  
@@ -84,21 +102,14 @@ app.use((req,res,next)=>{
 app.use((req,res,next)=>{
     // res.send("You are in middleware 2")
     console.log("In middleware 2")
-    next();  // the next function says move to next middleware otherwise the Routes. if you forgot to mention it along with any kind of response it will lead you to the error.
+    next();  
 
 })
 
 
-// 3- Defining Your middleware function 
 
- const logTime = (req, res, next) => {
-    console.log('Time:', Date.now());
-    next();
-  };
-  app.get('/Mytime', logTime, (req, res) => {
-    res.send('Hello, Person!');
-  });
-  
+
+
 
 ```
 
