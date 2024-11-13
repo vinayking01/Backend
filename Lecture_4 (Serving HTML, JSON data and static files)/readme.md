@@ -1,7 +1,8 @@
 # (A) Serving the Static files like HTML CSS, JSON txt etc. 
 
 1. To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
-2. Express provides the functionality of Serving these kind of files with the inbuilt middleware which is static()
+2. Express provides a built-in middleware, express.static, which allows you to serve static files from a specific folder without manually creating routes for each asset ( it solves the same issue occurred once in node js).
+3. Express provides the functionality of Serving these kind of files with the inbuilt middleware which is static()
       eg- exprees.static(root_directory,options) - : root_direcotry is the file / folder name you want to serve , otpional :- is the optional argument used for configuration
     
     ### Syntax
