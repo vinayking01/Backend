@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
-var db = require('./db')
-require('dotenv').config(); // .env file added for keeping you API password security
+var db = require('./db')  // by writing this single line it start establishing the connection to the database. 
+require('dotenv').config(); // this actually makes its variables available in process.env. . Usage - file added for keeping you API password security
 
 const  Port  = process.env.PORT || 8000;
 

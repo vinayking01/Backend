@@ -17,7 +17,7 @@ mongoose.connect(connectUrl, {
 
 const db = mongoose.connection;
 
-
+// these are the event listener listening inbuilt events
 db.on('error', (error) => {
   console.error('MongoDB connection error:', error);
 });
