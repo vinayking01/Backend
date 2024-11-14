@@ -18,7 +18,7 @@ app.get('/login', (req, res) => {
   
   // Access a specific header (e.g., User-Agent)
   const userAgent = req.get('User-Agent');
-  console.log(`User-Agent: ${userAgent}`);
+  res.send(`User-Agent: ${userAgent}`);
   
 })
 
