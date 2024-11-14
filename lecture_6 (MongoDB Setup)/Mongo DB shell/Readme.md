@@ -86,5 +86,6 @@
     ]
 
 // more commands available in pdf 
-
 ```
+
+cheatsheet mongo db shell commands - [DOC-20241.pdf](https://github.com/user-attachments/files/17748051/DOC-20241.pdf)
