@@ -1,10 +1,13 @@
 # Basic revision Points of EJS Template
-
-1. Tempalte Engine - ejs, pub , moustache.
-2. template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client. This approach makes it easier to design an HTML page.
-
-
-'public': This is the name of the directory that will contain your static files. You can change this to any other directory name if your static files are located elsewhere.
+## 1. EJS
+**Template Engine** -example ejs (Embedded Javascript), pug, mustache, ejs-mate (EJS-Mate is a package that helps you easily manage layouts, partials, and templates in EJS. It simplifies the process of reusing common structures like headers, footers, or entire page layouts across multiple pages.)
+- EJS is useful when you need dynamic HTML content or reusable templates on the server side.
+- It’s not necessary for static file serving or static websites. 
+- At runtime, the template engine replaces variables in a template file with actual values and transforms the template into an HTML file that is sent to the client.
+- This makes designing dynamic and reusable HTML pages much easier.
+- It also helps in implementing dynamic routing for rendering different views based on the request.
+- 'public': This is the name of the directory that will contain your static files. You can change this to any other directory name if your static files are located elsewhere.
+- It helps you to perform dynamic routing.
 
     ### Syntax-  
     #### File - index.js
@@ -29,8 +32,7 @@
     ```
 
 
-3. It helps you to perform dynamic routing.
-4. ### Rules of EJS Control Structures:
+    ### # Rules of EJS Control Structures:
     Enclose control structures like if, for, while, etc., within <% %>.
     Ensure that the HTML content inside these structures is properly placed outside the EJS tags
 
@@ -44,7 +46,7 @@
     <% } %>
     ```
 
-5. EJS templates use special tags to embed JavaScript code within HTML. Here are the key tags:
+    ### # EJS templates uses special tags to embed JavaScript code within HTML. Here are the key tags:
 
     (A)  <% %>: Executes JavaScript code but does not output the result.
     #### Home.ejs
@@ -76,4 +78,9 @@
 
     ```
 
-    
+## 2. EJS-Mate 
+- Extended version of EJS
+- EJS-Mate is a package that helps you easily manage layouts, partials, and templates in EJS. It simplifies the process of reusing common structures like headers, footers, or entire page layouts across multiple pages.
+- installation through - **npm i ejs-mate**
+- EJS-Mate allows you to use a common layout for multiple EJS templates, so you don't need to repeat the same structure in each file. This acts as a boilerplate, saving time and reducing redundancy
+- checkout here [Ejs Mate link](https://www.npmjs.com/package/ejs-mate)
