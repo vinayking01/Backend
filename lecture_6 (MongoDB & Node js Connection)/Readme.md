@@ -41,3 +41,13 @@ async function insertDocument() {
 insertDocument().catch(console.error);
 
 ```
+
+## Mongoose
+- It is the library that creates the connection between MongoDB and Javascript runtime environment.
+- It is an ODM(object Data Model) library.
+- If we want to create schema for the data base then it is also used.
+
+1. **Schema** - schema is a blueprint or structure that defines the shape of the documents (records) in a MongoDB collection
+2. **Model in Mongoose** - Model in mongoose is a class with which we construct documents
+
+Reference here for info - [Mongoose Docs](https://mongoosejs.com/docs/guide.html)

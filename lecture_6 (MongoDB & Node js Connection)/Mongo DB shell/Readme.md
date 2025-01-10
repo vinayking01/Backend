@@ -1,5 +1,5 @@
 ## Requirement - 
-1. MongoDB Installed 
+1. MongoDB Installed
 
 ## Connection Locally 
 1. Localhost - by default running on port 27017 
