@@ -106,11 +106,6 @@ app.use((req,res,next)=>{
 
 })
 
-
-
-
-
-
 ```
 
 ### Question - Difference between app.use( '/' ,middleware ) and app.get('/' ,middleware )
@@ -134,3 +129,10 @@ app.get("/user", (req, res) => {
 
 
 ```
+
+### Library & Framework
+**Library** - set of pre-written code , use for specific tasks,we have control how and where want to use. eg-  axios
+**Framework** -  set of pre-written code , provides structure for software development of applications, most control over the framework. eg- express
+
+## Express
+- Node.js web application, framework,used for server side programming.
