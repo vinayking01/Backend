@@ -1,10 +1,11 @@
 ## Topic  - Middleware
-1. A middleware is a function that hooks into the routing process, performing an arbitrary operation at some point in the chain (depending on what we want it to do). 
-2. Every middleware function should ends with either next() function inside the body or by sending the response otherwise it won't move to the next step and give you the error .
-3. Middleware are Prebuilt which you can install using the same way as packages ,or you can also create the custom middleware .
-4. Middleware executes in synchronized manner first come first serve.
-5. Middleware should always end either with response or next() which leads to the next middleware/routes
-6. You register your middleware function using app.use()
+1. Middleware in express are functions that come into play after the server receives the request and before the response is sent to the client.
+2. A middleware is a function that hooks into the routing process, performing an arbitrary operation at some point in the chain (depending on what we want it to do). 
+3. Every middleware function should ends with either next() function inside the body or by sending the response otherwise it won't move to the next step and give you the error .
+4. Middleware are Prebuilt which you can install using the same way as packages ,or you can also create the custom middleware .
+5. Middleware executes in synchronized manner first come first serve.
+6. Middleware should always end either with response or next() which leads to the next middleware/routes
+7. You register your middleware function using app.use()
 
 ## Middleware Types
 1. Application Middlewares - app.use() or route-specific methods (app.get(), app.post(), etc.). It applies globally or to specific routes. Means it runs on every request and the orders of middleware matters as it is synchronous.
